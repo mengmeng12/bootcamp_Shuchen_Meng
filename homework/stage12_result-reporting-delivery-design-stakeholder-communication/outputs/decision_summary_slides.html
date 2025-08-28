@@ -1,0 +1,43 @@
+
+        <!doctype html>
+        <html>
+        <head>
+          <meta charset="utf-8">
+          <title>Decision Summary Slides</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/white.min.css">
+        </head>
+        <body>
+        <div class="reveal">
+          <div class="slides">
+            <section>
+              <h1>Executive Summary</h1>
+              <pre style="white-space: pre-wrap; font-size: 0.9em;">## Executive Summary
+
+- **Objective**: Translate model results into decisions; expose assumptions and sensitivity.
+- **Key Finding**: Under winsor 10 90, R² = 0.668, MAE = 18.13.
+  Coefficients → const: -62.16, feature_1: 4.00, feature_2: 2.60
+- **Sensitivity**: Alternatives → none (R² 0.820, MAE 17.63); winsor 05 95 (R² 0.668, MAE 18.13).
+- **What this means for you**: Winsorizing outliers improves stability and reduces error, so you can rely on the model's insights when making decisions under noisy real-world conditions. If extreme values represent real risk events, consider parallel reporting to avoid understating volatility.
+- **Decision**: Winsorize at 10th/90th percentiles — *Why*: Reduces undue leverage from extreme points while retaining overall distribution shape..
+  Alternatives considered: None; Winsorize at 5th/95th.
+  Risks: If extreme values represent true business conditions, we may understate risk/volatility..</pre>
+            </section>
+            <section>
+              <h2>Outline</h2>
+              <ul><li>Executive Summary</li><li>Context & Problem</li><li>Method (High Level)</li><li>Key Results</li><li>Decision: Outlier Handling</li><li>Assumptions & Risks</li><li>Sensitivity (What-if Scenarios)</li><li>Decisions Enabled & Next Steps</li></ul>
+            </section><section><h2>Visual</h2><img src="outputs/example_chart.png" style="max-width:90%; margin:12px auto; display:block;" /></section>
+<section><h2>Visual</h2><img src="outputs/example_scatter.png" style="max-width:90%; margin:12px auto; display:block;" /></section>
+<section><h2>Visual</h2><img src="outputs/mae_by_scenario.png" style="max-width:90%; margin:12px auto; display:block;" /></section>
+<section><h2>Visual</h2><img src="outputs/predicted_vs_feature1_line.png" style="max-width:90%; margin:12px auto; display:block;" /></section>
+<section><h2>Visual</h2><img src="outputs/scenario_comparison.png" style="max-width:90%; margin:12px auto; display:block;" /></section>
+
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+<script>
+  Reveal.initialize({ hash: true });
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+[
+  {
+    "timestamp": "2025-08-28T19:50:56",
+    "Step": "Outlier Handling",
+    "Decision": "Winsorize at 10th/90th percentiles",
+    "Rationale": "Reduces undue leverage from extreme points while retaining overall distribution shape.",
+    "Alternatives": "None; Winsorize at 5th/95th",
+    "Risk": "If extreme values represent true business conditions, we may understate risk/volatility.",
+    "Impact": "Improved MAE vs 'none'; directionally consistent coefficients across scenarios."
+  }
+]
