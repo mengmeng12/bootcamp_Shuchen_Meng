@@ -1,11 +1,9 @@
-
-
 NOTE 
+
 This script is part of the Momentum project and depends on the project layout
 (data/, reports/checkpoints/, src/). Run it FROM THE PROJECT ROOT, e.g.:
-
-  conda activate bootcamp_env
-  python -m src.pipelines.fetch --tickers SPY QQQ EEM AGG --start 2005-01-01
+  - conda activate bootcamp_env
+  - python -m src.pipelines.fetch --tickers SPY QQQ EEM AGG --start 2005-01-01
 
 Running it standalone (e.g., copied into a homework folder) will NOT work unless
 you recreate the same folders or override paths via --out and --checkpoint.
